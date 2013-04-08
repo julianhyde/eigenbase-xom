@@ -1093,14 +1093,20 @@ public class MetaGenerator {
         File outputDir = javaFile.getParentFile();
         File dtdFile = new File(outputDir, model.dtdName);
 
+        // Create directories if necessary.
+        outputDir.mkdir();
+
+        writeFiles(javaFile, dtdFile);
+    }
+
+    public void writeFiles(File javaFile, File dtdFile)
+        throws XOMException, IOException
+    {
         // If the output file is MetaDef.java, and we start writing to
         // MetaDef.java before we have loaded MetaDef.class, the system thinks
         // that the class is out of date.  So load MetaDef.class before that
         // point.
         XOMUtil.discard(new MetaDef());
-
-        // Create directories if necessary.
-        outputDir.mkdir();
 
         // Open the files for writing
         FileWriter dtdWriter = new FileWriter(dtdFile);
