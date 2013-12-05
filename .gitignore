@@ -1,10 +1,8 @@
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-.idea/workspace.xml
 *~
+target
+.idea
+*.iml
+settings.xml
+.classpath.txt
+.fullclasspath.txt
 
