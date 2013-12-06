@@ -101,12 +101,10 @@
   </build>
 
   <distributionManagement>
-    <downloadUrl>http://repository.pentaho.org/artifactory/repo/eigenbase/eigenbase-xom/</downloadUrl>
     <repository>
-      <uniqueVersion>false</uniqueVersion>
-      <id>pentaho</id>
-      <name>Pentaho Repository</name>
-      <url>scp://repo.pentaho.org</url>
+      <id>conjars</id>
+      <name>Concurrent Conjars repository</name>
+      <url>http://conjars.org/repo</url>
       <layout>default</layout>
     </repository>
   </distributionManagement>
@@ -159,19 +157,5 @@
       </plugin>
     </plugins>
   </reporting>
-
-  <repositories>
-    <repository>
-      <releases>
-        <enabled>true</enabled>
-        <updatePolicy>always</updatePolicy>
-        <checksumPolicy>warn</checksumPolicy>
-      </releases>
-      <id>pentaho</id>
-      <name>Pentaho</name>
-      <url>http://repo.pentaho.org/artifactory/repo</url>
-      <layout>default</layout>
-    </repository>
-  </repositories>
 
 </project>
