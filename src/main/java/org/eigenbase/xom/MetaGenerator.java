@@ -820,8 +820,8 @@ public class MetaGenerator {
     /**
      * Return the TypeInfo class associated with the given name.
      *
-     * @post fail == false || return != null
-     * @exception XOMException if the type has not been defined
+     * @return TypeInfo, or null if not found and fail is false
+     * @exception XOMException if the type has not been defined and fail is true
      */
     public TypeInfo getTypeInfo(String name, boolean fail)
         throws XOMException
