@@ -29,7 +29,7 @@ import java.io.IOException;
  *
  * @author jhyde
  *
- * <hr/>
+ * <hr>
  *
  * <h2><a name="XOMGen">XOMGen</a></h2>
  * <h3>Description</h3>
@@ -42,7 +42,8 @@ import java.io.IOException;
  * </p>
  *
  * <h3>Parameters</h3>
- * <table border="1" cellpadding="2" cellspacing="0">
+ * <table border="1" cellpadding="2" cellspacing="0"
+ *     summary="XOMGen attributes">
  *   <tr>
  *     <td valign="top"><b>Attribute</b></td>
  *     <td valign="top"><b>Description</b></td>
@@ -85,7 +86,7 @@ import java.io.IOException;
  *   <code>src/org/eigenbase/xom/meta.dtd</code>.
  * </p>
  *
- * <hr/>
+ * <hr>
  */
 public class XOMGenTask extends Task {
     String modelFileName;

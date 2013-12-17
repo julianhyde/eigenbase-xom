@@ -90,10 +90,10 @@ public class XMLUtil {
     /**
      * Quote a string, and write to a {@link PrintWriter}.
      *
-     * <p>For example, <code>"a string"</code> becomes <code>&lt![CDATA[a
+     * <p>For example, <code>"a string"</code> becomes <code>&lt;![CDATA[a
      * string]]&gt;</code>.  If the string contains ']]&gt;' (which commonly
      * occurs when wrapping other XML documents), we give up on using
-     * <code>&lt![CDATA[</code> ... <code>]]&gt;</code>, and just encode the
+     * <code>&lt;![CDATA[</code> ... <code>]]&gt;</code>, and just encode the
      * string.  For example, <code>"A string with ]]&gt; in it"</code> becomes
      * <code>"A string with ]]&amp;gt; in it"</code>.</p>
      */
@@ -126,8 +126,8 @@ public class XMLUtil {
     /**
      * Quote a string in an element and a CDATA, and write to a {@link
      * PrintWriter}.  For example, it <code>tag</code> is "Value", then
-     * <code>"a string"</code> becomes <code>&ltValue&gt;&lt![CDATA[a
-     * string]]&gt;&lt/Value&gt;.
+     * <code>"a string"</code> becomes <code>&lt;Value&gt;&lt;![CDATA[a
+     * string]]&gt;&lt;/Value&gt;</code>.
      *
      * @param newline whether to print a newline after the element
      * @see #printPCDATA(PrintWriter,String)

@@ -313,7 +313,7 @@ public class XMLOutput {
      * <ul>
      * <li><code>&amp;</code>
      * <li><code>&quot;</code>
-     * <li><code>&apos;</code>
+     * <li><code>'</code>
      * <li><code>&lt;</code>
      * <li><code>&gt;</code>
      * </ul>
