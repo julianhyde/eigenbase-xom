@@ -88,6 +88,7 @@
         <extensions>true</extensions>
         <configuration>
           <instructions>
+            <Import-Package>org.apache.tools.ant;resolution:=optional,*</Import-Package>
             <DynamicImport-Package>*</DynamicImport-Package>
           </instructions>
         </configuration>
