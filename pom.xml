@@ -4,7 +4,7 @@
   <!-- The basics. -->
   <groupId>eigenbase</groupId>
   <artifactId>eigenbase-xom</artifactId>
-  <version>1.3.4-SNAPSHOT</version>
+  <version>1.3.4</version>
   <packaging>bundle</packaging>
 
   <!-- More project information. -->
@@ -120,7 +120,7 @@
     <connection>scm:git:git://github.com/julianhyde/eigenbase-xom.git</connection>
     <developerConnection>scm:git:git@github.com:julianhyde/eigenbase-xom.git</developerConnection>
     <url>scm:git:git://github.com/julianhyde/eigenbase-xom.git</url>
-    <tag>HEAD</tag>
+    <tag>eigenbase-xom-1.3.4</tag>
   </scm>
 
   <dependencies>
