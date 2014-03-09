@@ -17,13 +17,17 @@
 */
 package org.eigenbase.xom;
 
-import junit.framework.TestCase;
+import org.junit.Test;
+
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.notNullValue;
+import static org.junit.Assert.assertThat;
 
 /**
  * Unit tests for XOM module.
  */
-public class XomTest extends TestCase {
-    public void testFoo() throws XOMException {
+public class XomTest {
+    @Test public void testFoo() throws XOMException {
         final Parser xmlParser = XOMUtil.createDefaultParser();
         xmlParser.setKeepPositions(true);
         final String lineSep = System.getProperty("line.separator");
@@ -53,38 +57,38 @@ public class XomTest extends TestCase {
             + "</Element>" + lineSep
             + "</Model>";
         DOMWrapper def = xmlParser.parse(xml);
-        assertNotNull(def);
+        assertThat(def, notNullValue());
         final MetaDef.Model model = new MetaDef.Model(def);
-        assertNotNull(model);
+        assertThat(model, notNullValue());
 
         Location location = model.getLocation();
-        assertEquals("Model", model.getName());
-        assertEquals(1, location.getStartLine());
-        assertEquals(1, location.getStartColumn());
-        assertEquals(25, location.getEndLine());
-        assertEquals(9, location.getEndColumn());
+        assertThat(model.getName(), equalTo("Model"));
+        assertThat(location.getStartLine(), equalTo(1));
+        assertThat(location.getStartColumn(), equalTo(1));
+        assertThat(location.getEndLine(), equalTo(25));
+        assertThat(location.getEndColumn(), equalTo(9));
 
         // Model only has one child, Element. Doc is Cdata, so becomes an
         // attribute.
         NodeDef[] children = model.getChildren();
-        assertEquals(1, children.length);
+        assertThat(children.length, equalTo(1));
         final NodeDef element = children[0];
-        assertEquals("Element", element.getName());
+        assertThat(element.getName(), equalTo("Element"));
         location = element.getLocation();
-        assertEquals(17, location.getStartLine());
-        assertEquals(1, location.getStartColumn());
-        assertEquals(24, location.getEndLine());
-        assertEquals(11, location.getEndColumn());
+        assertThat(location.getStartLine(), equalTo(17));
+        assertThat(location.getStartColumn(), equalTo(1));
+        assertThat(location.getEndLine(), equalTo(24));
+        assertThat(location.getEndColumn(), equalTo(11));
 
         children = element.getChildren();
-        assertEquals(4, children.length);
+        assertThat(children.length, equalTo(4));
         NodeDef attribute = children[1];
-        assertEquals("Attribute", attribute.getName());
+        assertThat(attribute.getName(), equalTo("Attribute"));
         location = attribute.getLocation();
-        assertEquals(23, location.getStartLine());
-        assertEquals(5, location.getStartColumn());
-        assertEquals(23, location.getEndLine());
-        assertEquals(32, location.getEndColumn());
+        assertThat(location.getStartLine(), equalTo(23));
+        assertThat(location.getStartColumn(), equalTo(5));
+        assertThat(location.getEndLine(), equalTo(23));
+        assertThat(location.getEndColumn(), equalTo(32));
     }
 }
 
