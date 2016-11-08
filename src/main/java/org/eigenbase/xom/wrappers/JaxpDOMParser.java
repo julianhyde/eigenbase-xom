@@ -22,6 +22,7 @@ import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
+import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.FactoryConfigurationError;
@@ -45,7 +46,7 @@ public class JaxpDOMParser extends GenericDOMParser {
     /** Creates a parser. */
     public JaxpDOMParser(boolean validating) throws XOMException {
         try {
-            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            DocumentBuilderFactory factory = createSecureDocBuilderFactory();
             factory.setValidating(validating);
             try {
                 factory.setAttribute(VALIDATION_FEATURE, new Boolean(validating));
@@ -79,6 +80,23 @@ public class JaxpDOMParser extends GenericDOMParser {
             handleErrors();
             throw new XOMException(e, "Document parse failed");
         }
+    }
+
+    /**
+     * Creates an instance of {@link DocumentBuilderFactory} class
+     * with enabled {@link XMLConstants#FEATURE_SECURE_PROCESSING} property.
+     * Enabling this feature prevents from some XXE attacks (e.g. XML bomb)
+     * See http://jira.pentaho.com/browse/PPP-3506 for more details.
+     *
+     * @throws ParserConfigurationException if feature can't be enabled
+     *
+     */
+    private DocumentBuilderFactory createSecureDocBuilderFactory() throws ParserConfigurationException {
+        DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
+        docBuilderFactory.setFeature(XMLConstants.FEATURE_SECURE_PROCESSING, true);
+        docBuilderFactory.setFeature("http://apache.org/xml/features/disallow-doctype-decl", true);
+
+        return docBuilderFactory;
     }
 }
 
