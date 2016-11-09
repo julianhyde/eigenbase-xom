@@ -16,6 +16,47 @@ $ cd eigenbase-xom
 $ mvn install
 ```
 
+# Use maven artifacts
+
+Include the following in your `pom.xml`.
+
+```xml
+  <repositories>
+    <repository>
+      <releases>
+        <enabled>true</enabled>
+        <updatePolicy>always</updatePolicy>
+        <checksumPolicy>warn</checksumPolicy>
+      </releases>
+      <id>conjars</id>
+      <name>Conjars</name>
+      <url>http://conjars.org/repo</url>
+      <layout>default</layout>
+    </repository>
+  </repositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>eigenbase</groupId>
+      <artifactId>eigenbase-xom</artifactId>
+      <version>1.3.5</version>
+    </dependency>
+  </dependencies>
+```
+
+# Release (for committers only)
+
+Update version numbers in `README.md`, copyright date in `NOTICE`, and
+add release notes to `HISTORY.md`.
+
+Use JDK 1.7.
+
+```bash
+$ git clean -nx
+$ mvn release:clean release:prepare
+$ mvn release:perform
+```
+
 # More information
 
 * License: Apache License, Version 2.0.
