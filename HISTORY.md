@@ -2,6 +2,15 @@
 
 For a full list of releases, see <a href="https://github.com/julianhyde/eigenbase-xom/releases">github</a>.
 
+## <a href="https://github.com/julianhyde/eigenbase-xom/releases/tag/eigenbase-xom-1.3.5">1.3.5</a> / 2016-11-09
+
+* Set Apache Felix version, for compatibility with JDK 1.6
+* [<a href="https://github.com/julianhyde/eigenbase-xom/issues/6">XOM-6</a>]
+  Add `createSecureDocBuilderFactory` to `JaxpDOMParser`; upgrade Xerces
+* Upgrade to junit-4.11
+* [<a href="https://github.com/julianhyde/eigenbase-xom/issues/5">XOM-5</a>]
+  Mark ant dependency as optional
+
 ## <a href="https://github.com/julianhyde/eigenbase-xom/releases/tag/eigenbase-xom-1.3.4">1.3.4</a> / 2014-01-08
 
 * Add release notes and history.

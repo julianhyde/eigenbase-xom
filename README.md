@@ -6,7 +6,7 @@ XML object model for Java.
 
 # Prerequisites
 
-Eigenbase-XOM requires git, maven (3.0.4 or later), and JDK 1.6 or later (JDK 1.7 preferred).
+Eigenbase-XOM requires git, maven (3.0.4 or later), and JDK 1.6 or later (JDK 1.8 preferred).
 
 # Download and build
 
@@ -22,6 +22,9 @@ $ mvn install
 * Author: Julian Hyde
 * Project page: http://www.hydromatic.net/xom
 * Source code: http://github.com/julianhyde/eigenbase-xom
-* Developers list: http://groups.google.com/group/optiq-dev
+* Developers list:
+  <a href="mailto:dev@calcite.apache.org">dev at calcite.apache.org</a>
+  (<a href="http://mail-archives.apache.org/mod_mbox/calcite-dev/">archive</a>,
+  <a href="mailto:dev-subscribe@calcite.apache.org">subscribe</a>)
 * Continuous integration: https://travis-ci.org/julianhyde/eigenbase-xom
 * <a href="HISTORY.md">Release notes and history</a>
