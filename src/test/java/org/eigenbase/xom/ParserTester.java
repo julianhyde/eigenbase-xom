@@ -119,7 +119,6 @@ public class ParserTester {
      * <li> The DTD file of the XML file
      * <li> The XML file for this DTD file
      * </ol>
-     * </p>
      */
     public static void main(String args[])
         throws XOMException, IOException
