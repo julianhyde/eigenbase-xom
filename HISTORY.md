@@ -2,6 +2,14 @@
 
 For a full list of releases, see <a href="https://github.com/julianhyde/eigenbase-xom/releases">github</a>.
 
+## <a href="https://github.com/julianhyde/eigenbase-xom/releases/tag/eigenbase-xom-1.3.6">1.3.6</a> / 2020-11-12
+
+* Upgrade junit to 4.13.1, xerces to 2.12.0
+* Publish releases to <a href="https://search.maven.org/artifact/net.hydromatic/eigenbase-xom">Maven Central</a>
+  (previous releases are in <a href="http://www.conjars.org/">Conjars</a>)
+* Sign jars
+* Change maven groupId from "eigenbase" to "net.hydromatic"
+
 ## <a href="https://github.com/julianhyde/eigenbase-xom/releases/tag/eigenbase-xom-1.3.5">1.3.5</a> / 2016-11-09
 
 * Set Apache Felix version, for compatibility with JDK 1.6

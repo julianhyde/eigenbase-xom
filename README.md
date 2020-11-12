@@ -6,7 +6,9 @@ XML object model for Java.
 
 # Prerequisites
 
-Eigenbase-XOM requires git, maven (3.0.4 or later), and JDK 1.6 or later (JDK 1.8 preferred).
+Eigenbase-XOM requires git,
+Apache Maven (3.2.1 or later),
+and JDK 8 or later.
 
 # Download and build
 
@@ -35,9 +37,10 @@ Include the following in your `pom.xml`.
 Update version numbers in `README.md`, copyright date in `NOTICE`, and
 add release notes to `HISTORY.md`.
 
-Use JDK 1.7.
+Use JDK 8.
 
 ```bash
+$ export GPG_TTY=$(tty)
 $ git clean -nx
 $ mvn clean
 $ mvn release:clean
