@@ -77,5 +77,5 @@ $ mvn -Prelease release:perform
   <a href="mailto:dev@calcite.apache.org">dev at calcite.apache.org</a>
   (<a href="https://mail-archives.apache.org/mod_mbox/calcite-dev/">archive</a>,
   <a href="mailto:dev-subscribe@calcite.apache.org">subscribe</a>)
-* Continuous integration: https://travis-ci.org/julianhyde/eigenbase-xom
+* Continuous integration: https://travis-ci.com/julianhyde/eigenbase-xom
 * <a href="HISTORY.md">Release notes and history</a>
