@@ -4,4 +4,4 @@ jdk:
   - oraclejdk8
 branches:
   only:
-    - master
+    - main
