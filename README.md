@@ -25,16 +25,21 @@ XML object model for Java.
 
 # Prerequisites
 
-Eigenbase-XOM requires git,
-Apache Maven (3.2.1 or later),
-and JDK 8 or later.
+Eigenbase-XOM requires git
+and Java (JDK 8) or later.
 
 # Download and build
 
 ```bash
 $ git clone git://github.com/julianhyde/eigenbase-xom.git
 $ cd eigenbase-xom
-$ mvn install
+$ ./mvnw install
+```
+
+On Windows, the last line is
+
+```bash
+> mvnw install
 ```
 
 # Use maven artifacts
@@ -61,10 +66,10 @@ Use JDK 8.
 ```bash
 $ export GPG_TTY=$(tty)
 $ git clean -nx
-$ mvn clean
-$ mvn release:clean
-$ mvn -Prelease release:prepare
-$ mvn -Prelease release:perform
+$ ./mvnw clean
+$ ./mvnw release:clean
+$ ./mvnw -Prelease release:prepare
+$ ./mvnw -Prelease release:perform
 ```
 
 # More information
