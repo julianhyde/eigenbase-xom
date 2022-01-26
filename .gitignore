@@ -5,4 +5,4 @@ target
 settings.xml
 .classpath.txt
 .fullclasspath.txt
-
+.mvn/wrapper/maven-wrapper.jar
