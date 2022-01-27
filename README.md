@@ -51,7 +51,7 @@ Include the following in your `pom.xml`.
     <dependency>
       <groupId>net.hydromatic</groupId>
       <artifactId>eigenbase-xom</artifactId>
-      <version>1.3.6</version>
+      <version>1.3.7</version>
     </dependency>
   </dependencies>
 ```

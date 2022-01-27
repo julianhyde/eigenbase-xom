@@ -2,6 +2,14 @@
 
 For a full list of releases, see <a href="https://github.com/julianhyde/eigenbase-xom/releases">github</a>.
 
+## <a href="https://github.com/julianhyde/eigenbase-xom/releases/tag/eigenbase-xom-1.3.7">1.3.7</a> / 2022-01-27
+
+* Upgrade Apache Xerces (xercesImpl) from 2.12.0 to 2.12.2
+* Upgrade Apache Ant from 1.10.9 to 1.10.11
+* Maven wrapper
+* Travis: switch from Oracle JDK 8 to OpenJDK 8
+* Rename 'master' branch to 'main'
+
 ## <a href="https://github.com/julianhyde/eigenbase-xom/releases/tag/eigenbase-xom-1.3.6">1.3.6</a> / 2020-11-12
 
 * Upgrade junit to 4.13.1, xerces to 2.12.0
